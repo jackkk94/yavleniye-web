@@ -1,0 +1,868 @@
+@use "normalize.scss";
+@use "fonts.scss";
+@use "mixins.scss";
+@use "utils.scss";
+
+$gold: #d4c6a5;
+
+$desktop-medium: 1919px;
+$desktop-small: 1439px;
+$tablet: 1023px;
+$mobile: 767px;
+
+html,
+body {
+    min-height: 100%;
+    font-family: Manrope;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: Manrope;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.mb-0 {
+    margin-bottom: 0!important;
+}
+
+.hidden-md {
+    display: inline-block;
+    @media only screen and (max-width: $desktop-small) {
+        display: none;
+    }
+}
+
+.visible-md {
+    display: none;
+    @media only screen and (max-width: $desktop-small) {
+        display: inline-block;
+    }
+}
+
+.hidden-tablet {
+    display: inline-block;
+    @media only screen and (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.visible-tablet {
+    display: none;
+    @media only screen and (max-width: $tablet) {
+        display: inline-block;
+    }
+}
+
+.btn {
+    text-align: center;
+    background: transparent;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 16px 26px;
+    @include mixins.text(17px, 20px, 600, white);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    &:hover {
+        background: $gold;
+    }
+
+    &-dark {
+        border-color: black;
+    }
+    &-dark,
+    &-primary {
+        color: black;
+        font-weight: 700;
+    }
+
+    &-primary {
+        border-radius: 6px;
+        border: 0;
+        background-color: $gold;
+        padding: 26px;
+    }
+}
+
+.pattern-1,
+.pattern-2,
+.pattern-3,
+.pattern-4,
+.pattern-5,
+.pattern-6,
+.pattern-7,
+.pattern-8,
+.pattern-9,
+.pattern-10,
+.pattern-11,
+.pattern-13 {
+    position: relative;
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.pattern-12 {
+    position: relative;
+    &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.pattern-1:before {
+    @include mixins.pattern("./img/patterns/pattern-1.svg", 884px, 871 / 317, -10px, -14px);
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    @media only screen and (max-width: $desktop-small) {
+        width: 620px;
+        top: 43%;
+    }
+}
+.pattern-2:before {
+    @include mixins.pattern("./img/patterns/pattern-2.svg", 660px, 20 / 1, auto, -14px, -35px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 579px;
+        left: -26px;
+        bottom: -34px;
+    }
+}
+.pattern-3:before {
+    @include mixins.pattern("./img/patterns/pattern-3.svg", 835px, 835 / 187, 50%, 50%);
+    transform: translate(-50%, -50%);
+    @media only screen and (max-width: $desktop-small) {
+        width: 608px;
+    }
+}
+
+.pattern-4:before {
+    z-index: -1;
+    @include mixins.pattern("./img/patterns/pattern-4.svg", 191px, 191 / 38, -10px, -14px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 134px;
+        top: -7px;
+    }
+}
+
+.pattern-5:before {
+    @include mixins.pattern("./img/patterns/pattern-5.svg", 211px, 211 / 210, -47px, -47px);
+    @media only screen and (max-width: $desktop-small) {
+        top: -20px;
+        left: -34px;
+        width: 156px;
+    }
+}
+
+.pattern-6:before {
+    @include mixins.pattern("./img/patterns/pattern-6.svg", 101px, 101 / 4, auto, 0px, -12px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 82px;
+        bottom: -22px;
+    }
+}
+
+.pattern-7:before {
+    @include mixins.pattern("./img/patterns/pattern-7.svg", 169px, 169 / 5, auto, -4px, -5px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 121px;
+        bottom: -4px;
+    }
+}
+
+.pattern-8:before {
+    @include mixins.pattern("./img/patterns/pattern-8.svg", 329px, 329 / 9, auto, -14px, -6px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 243px;
+        left: -8px;
+        bottom: -4px;
+    }
+}
+
+.pattern-9:before {
+    @include mixins.pattern("./img/patterns/pattern-9.svg", 75px, 75 / 4, auto, -2px, -4px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 72px;
+    }
+}
+.pattern-10:before {
+    @include mixins.pattern("./img/patterns/pattern-10.svg", 337px, 337 / 9, auto, 3px, -7px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 334px;
+        left: -12px;
+    }
+}
+.pattern-11:before {
+    @include mixins.pattern("./img/patterns/pattern-11.svg", 56px, 56 / 3, auto, 3px, -5px);
+    @media only screen and (max-width: $desktop-small) {
+        display: none;
+    }
+}
+
+.pattern-12:after {
+    @include mixins.pattern("./img/patterns/pattern-12.svg", 149px, 149 / 193, auto, auto, -17px, -28px);
+    @media only screen and (max-width: $desktop-small) {
+        width: 103px;
+        bottom: -67px;
+        right: -33px;
+    }
+}
+
+.pattern-13:before {
+    @include mixins.pattern("./img/patterns/pattern-13.svg", 48px, 48 / 9, auto, 0, -8px);
+}
+
+.header {
+    position: relative;
+    height: 1200px;
+    max-height: 100vh;
+    width: 100%;
+
+    .navigation {
+        max-width: 1920px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 0 88px 0 40px;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1111;
+        @include mixins.text(18px, 18px, 600, white);
+        text-transform: uppercase;
+
+        @media only screen and (max-width: $desktop-small) {
+            padding: 0 48px 0 18px;
+            @include mixins.text(12px, 12px, 700, white);
+            ul {
+                gap: 28px;
+            }
+            width: 1000px;
+        }
+
+        @media only screen and (max-width: $tablet) {
+            padding: 0 42px 0 32px;
+            @include mixins.text(10px, 10px, 700, white);
+            ul {
+                gap: 35px;
+            }
+            width: 100%;
+        }
+    }
+
+    .banner {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        .btn {
+            width: 172px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 100%);
+        }
+        .img {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            width: 100%;
+            min-height: 100%;
+            height: auto;
+            transform: translateX(-50%);
+            object-fit: cover;
+        }
+
+        .content {
+            position: relative;
+            margin-top: 23%;
+            width: 1180px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            z-index: 100;
+
+            .title {
+                @include mixins.text(80px, 86px, 800, white);
+                @media only screen and (max-width: $desktop-small) {
+                    @include mixins.text(60px, 70px, 800, white);
+                }
+            }
+
+            .description {
+                margin-top: 28px;
+                @include mixins.text(22px, 33px, 400, white);
+                @media only screen and (max-width: $desktop-small) {
+                    font-size: 18px;
+                    margin-top: 8px;
+                }
+            }
+
+            .btn {
+                margin-top: 60px;
+                width: 172px;
+                @media only screen and (max-width: $desktop-small) {
+                    margin-top: 49px;
+                    width: 146px;
+                    padding: 10px;
+                    font-weight: 600;
+                }
+            }
+
+            @media only screen and (max-width: $desktop-medium) {
+                margin-top: 22%;
+                width: 1000px;
+            }
+
+            @media only screen and (max-width: $desktop-small) {
+                width: 762px;
+            }
+
+            @media only screen and (max-width: $tablet) {
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: $tablet) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .logo {
+        display: flex;
+        width: 140px;
+        .img {
+            width: 100%;
+        }
+    }
+}
+
+.section-donations {
+    padding: 149px 0 56px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: $desktop-medium) {
+        padding: 140px 0 110px;
+    }
+
+    .section-title {
+        position: relative;
+        .img {
+            position: absolute;
+            top: -72px;
+            left: -142px;
+        }
+        @include mixins.text(60px, 47px, 800, black);
+        text-transform: uppercase;
+
+        @media only screen and (max-width: $desktop-small) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+
+    .info-wrapper {
+        margin-top: 84px;
+        display: flex;
+        align-items: center;
+        gap: 78px;
+
+        .qr {
+            width: 254px;
+
+            .img,
+            .btn {
+                width: 100%;
+            }
+            .btn {
+                margin-top: 30px;
+
+                font-size: 16px;
+
+                @media only screen and (max-width: $desktop-small) {
+                }
+            }
+        }
+
+        .description {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 44px;
+            width: 350px;
+
+            .attention {
+                text-align: center;
+                @include mixins.text(17px, 24px, 400, black);
+            }
+
+            .purpose {
+                cursor: pointer;
+                width: 100%;
+                padding: 20px 33px;
+                border-radius: 9px;
+                border: 1px dashed black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 28px;
+
+                .text {
+                    padding-right: 28px;
+                    @include mixins.text(15px, 26px, 400, black);
+                }
+            }
+            .info {
+                text-align: center;
+                @include mixins.text(17px, 23px, 400, black);
+            }
+        }
+    }
+    .report-info {
+        margin-top: 68px;
+        width: 882px;
+        padding: 14px 16px;
+        text-align: center;
+        @include mixins.text(14px, 27px, 400, black);
+        @media only screen and (max-width: $desktop-medium) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.section-connect-commands {
+    padding: 64px 0;
+    background: linear-gradient(186.54deg, #000000 5.14%, #414141 124.57%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media only screen and (max-width: $desktop-small) {
+        padding-top: 54px;
+    }
+
+    .section-title {
+        position: relative;
+        .img {
+            position: absolute;
+            top: 53px;
+            left: -14px;
+        }
+        @include mixins.text(60px, 52px, 800, white);
+        @media only screen and (max-width: $desktop-small) {
+            font-size: 50px;
+        }
+        text-transform: uppercase;
+    }
+
+    .section-sub-title {
+        text-align: center;
+        margin-top: 32px;
+        @include mixins.text(20px, 36px, 300, #d4c6a5);
+        @media only screen and (max-width: $desktop-small) {
+            margin-top: 40px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    .carousel {
+        margin-top: 55px;
+        width: 100%;
+
+        .slick-list {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .slick-slide {
+            .slide-card {
+                display: block !important;
+                transition: all 0.3s ease-in-out;
+                position: relative;
+                &:hover :before {
+                    content: "";
+                    display: block;
+                    width: 310px;
+                    height: calc(100% + 50px);
+                    border-radius: 25px;
+                    border: 1px solid $gold;
+                    position: absolute;
+                    top: -25px;
+                    left: -25px;
+                }
+                cursor: pointer;
+                .img-wrapper {
+                    width: 100%;
+                    height: 346px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                img {
+                    position: absolute;
+                    width: 100%;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .info {
+                    .title {
+                        @include mixins.text(25px, 32px, 700, white);
+                        margin-top: 14px;
+                    }
+                    .address {
+                        @include mixins.text(14px, 24px, 500, #949494);
+                        margin-top: 14px;
+                    }
+                    .link {
+                        text-decoration: underline;
+                        display: flex;
+                        @include mixins.text(16px, 28px, 700, $gold);
+                        margin-top: 30px;
+                        gap: 6px;
+
+                        &::after {
+                            margin-top: 10px;
+                            content: "";
+                            display: block;
+                            width: 12px;
+                            height: 12px;
+                            background-image: url("./img/arrow.svg");
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+            box-sizing: content-box;
+            &:first-child {
+                padding-left: 138px;
+            }
+            margin: 0px 25px;
+            width: 260px !important;
+            transition: all ease-in-out 0.3s;
+
+            img {
+                width: 100%;
+            }
+
+            &.slick-active {
+            }
+
+            &.slick-current {
+            }
+        }
+    }
+    .carousel-nav {
+        margin: 125px auto 0;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        .icon {
+            background-image: url("./img/arrow-left.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 88px;
+            height: 16px;
+
+            cursor: pointer;
+            &-next {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.footer {
+    .socials-wrapper {
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, #000000 100%);
+        }
+
+        .socials-data {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 38px;
+            z-index: 10;
+            align-items: center;
+            @media only screen and (max-width: $desktop-small) {
+                gap: 62px;
+            }
+            .note {
+                @include mixins.text(11px, 17px, 300, rgba(255, 255, 255, 0.8));
+            }
+        }
+        .socials-list {
+            display: flex;
+            align-items: center;
+            gap: 114px;
+
+            .social-item {
+                @include mixins.text(30px, 30px, 700, white);
+                display: flex;
+                align-items: baseline;
+                gap: 6px;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url("./img/arrow.svg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    background-color: black;
+    width: 100%;
+
+    .img {
+        width: 100%;
+    }
+
+    .navigation {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1760px;
+        padding: 63px 70px 25px 70px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: $desktop-small) {
+            padding: 39px 24px 33px 33px;
+        }
+        .logo {
+            display: flex;
+            width: 149px;
+            .img {
+                width: 100%;
+            }
+
+            @media only screen and (max-width: $desktop-small) {
+                width: 100px;
+            }
+        }
+
+        .links-container {
+            padding-top: 60px;
+            padding-left: 60px;
+            @media only screen and (max-width: $desktop-medium) {
+                padding-top: 0px;
+            }
+            @media only screen and (max-width: $desktop-small) {
+                padding-top: 48px;
+            }
+            &,
+            .list {
+                display: flex;
+                align-items: center;
+            }
+            flex-direction: column;
+            gap: 28px;
+
+            .list {
+                gap: 50px;
+                @media only screen and (max-width: $desktop-small) {
+                    gap: 27px;
+                }
+                .list-item a {
+                    text-transform: uppercase;
+                    @include mixins.text(14px, 19px, 700, $gold);
+                    @media only screen and (max-width: $desktop-small) {
+                        font-size: 10px;
+                        line-height: 18px;
+                    }
+                }
+            }
+            .organization-data {
+                text-align: center;
+                @include mixins.text(10px, 18px, 300, #949494);
+            }
+        }
+
+        .policy {
+            text-align: right;
+            a {
+                @include mixins.text(12px, 23px, 400, $gold);
+                @media only screen and (max-width: $desktop-small) {
+                    font-size: 9px;
+                    line-height: 23px;
+                }
+            }
+        }
+    }
+}
+
+.section-church-vision {
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    @media only screen and (max-width: $desktop-medium) {
+        padding: 150px 0;
+    }
+
+    @media only screen and (max-width: $desktop-small) {
+        padding: 74px 0;
+    }
+
+    .church-vision {
+        max-width: 1161px;
+        margin: 0 auto;
+        display: flex;
+        gap: 40px;
+        @media only screen and (max-width: $desktop-small) {
+            width: 930px;
+            gap: 36px;
+        }
+
+        @media only screen and (max-width: $tablet) {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .img-wrapper {
+            width: 760px;
+            height: fit-content;
+            .img {
+                width: 100%;
+            }
+
+            @media only screen and (max-width: $desktop-small) {
+                width: 581px;
+            }
+            @media only screen and (max-width: $tablet) {
+                order: 2;
+            }
+        }
+
+        .description {
+            flex: 1;
+            .section-sub-title {
+                text-transform: uppercase;
+                @include mixins.text(48px, 67px, 800);
+                margin-bottom: 54px;
+                @media only screen and (max-width: $desktop-small) {
+                    @include mixins.text(40px, 50px, 800);
+                    margin-bottom: 45px;
+                }
+            }
+
+            p {
+                @include mixins.text(16px, 24px, 300);
+                margin-bottom: 28px;
+
+                @media only screen and (max-width: $desktop-small) {
+                    @include mixins.text(12px, 20px, 300);
+                    margin-bottom: 14px;
+                }
+            }
+            @media only screen and (max-width: $tablet) {
+                order: 1;
+                gap: 6px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.section-service {
+    padding: 144px 0 191px;
+    text-align: center;
+    @media only screen and (max-width: $desktop-medium) {
+        padding: 90px 0 147px;
+    }
+    @media only screen and (max-width: $desktop-small) {
+        padding: 135px 0 102px;
+    }
+    .section-title {
+        display: inline-block;
+        position: relative;
+        @include mixins.text(60px, 80px, 800);
+        text-transform: uppercase;
+        .img {
+            position: absolute;
+            top: -71px;
+            left: 325px;
+            text-align: center;
+            width: 871px;
+        }
+        @media only screen and (max-width: $desktop-small) {
+            @include mixins.text(40px, 58px, 800);
+        }
+    }
+
+    .description {
+        position: relative;
+        margin-top: 38px;
+        @include mixins.text(27px, 44px, 300);
+        @media only screen and (max-width: $desktop-small) {
+            margin-top: 60px;
+            @include mixins.text(23px, 37px, 300);
+        }
+    }
+
+    .btn {
+        margin-top: 53px;
+        @media only screen and (max-width: $desktop-small) {
+            margin-top: 42px;
+        }
+    }
+}
+
+.btn {
+    width: 215px;
+}
