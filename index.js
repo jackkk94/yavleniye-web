@@ -4,7 +4,7 @@ $(document).on('ready', function () {
     arrows: false,
     initialSlide: 0,
     slidesToScroll: 1,
-    slidesToShow: 5,
+    slidesToShow: 4,
     variableWidth: true,
     centerMode: false,
     focusOnChange: false,
@@ -12,26 +12,55 @@ $(document).on('ready', function () {
     draggable: true,
     swipe: true,
     swipeToSlide: true,
+              
     responsive: [
-    {
-      breakpoint: 1500,
-      settings: {
-        slidesToShow: 4,
-      }
-    },
-{
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 3,
-      }
-    }]
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1310,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+
+       {
+        breakpoint: 740,
+        settings: {
+          slidesToShow: 2,
+           infinite: true,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+
+        },
+      },
+    ],
   });
 
-  $('#prev').on('click', function () {
+  $('.carousel-prev').on('click', function () {
     $('.carousel').slick('slickPrev');
   });
 
-  $('#next').on('click', function () {
+  $('.carousel-next').on('click', function () {
     $('.carousel').slick('slickNext');
   });
 });
@@ -58,10 +87,19 @@ document.getElementById('textToCopy').addEventListener('click', async () => {
     return;
   }
 
-
   try {
     await navigator.clipboard.writeText('Пожертвование для МРГ "Явление Духа и Силы"');
   } catch (err) {
     console.error('Не удалось скопировать текст: ', err);
   }
 });
+
+document.getElementById('menuToggler').addEventListener('click', async () => {
+  const el = document.querySelector('.menu-mobile');
+    if (el) {
+     el.classList.toggle('opened')
+    }
+});
+
+
+
