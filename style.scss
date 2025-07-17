@@ -464,7 +464,10 @@ body {
                 transform: translateX(-69%);
             }
 
-
+            @media only screen and (max-width: $tablet) and (max-height: 600px) and (min-width: $mobile){
+                width: 100%;
+                transform: translateX(-50%);
+            }
         }
 
         .content {
