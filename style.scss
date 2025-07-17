@@ -161,6 +161,10 @@ body {
         aspect-ratio: 623 / 227;
         top: 40%;
     }
+    @media only screen and (max-width: $mobile-small) {
+        width: 376px;
+        top: 46%;
+    }
 }
 .pattern-2:before {
     @include mixins.pattern("./img/patterns/pattern-2.svg", 660px, 20 / 1, auto, -14px, -35px);
@@ -464,7 +468,7 @@ body {
                 transform: translateX(-69%);
             }
 
-            @media only screen and (max-width: $tablet) and (max-height: 600px) and (min-width: $mobile){
+            @media only screen and (max-width: $tablet) and (max-height: 600px) and (min-width: $mobile) {
                 width: 100%;
                 transform: translateX(-50%);
             }
