@@ -35,48 +35,6 @@ body {
     margin-bottom: 0 !important;
 }
 
-.hidden-md {
-    display: inline-block;
-    @media only screen and (max-width: $desktop-small) {
-        display: none;
-    }
-}
-
-.visible-md {
-    display: none;
-    @media only screen and (max-width: $desktop-small) {
-        display: inline-block;
-    }
-}
-
-.hidden-tablet {
-    display: inline-block;
-    @media only screen and (max-width: $tablet) {
-        display: none;
-    }
-}
-
-.visible-tablet {
-    display: none;
-    @media only screen and (max-width: $tablet) {
-        display: inline-block;
-    }
-}
-
-.hidden-sm {
-    display: inline-flex;
-    @media only screen and (max-width: $mobile) {
-        display: none;
-    }
-}
-
-.visible-sm {
-    display: none;
-    @media only screen and (max-width: $mobile) {
-        display: inline-block;
-    }
-}
-
 .btn {
     text-align: center;
     background: transparent;
@@ -103,8 +61,18 @@ body {
     &-primary {
         border-radius: 6px;
         border: 0;
+        outline: 2px solid transparent;
         background-color: $gold;
         padding: 26px;
+        &:hover {
+            background-color: transparent;
+            outline-color: black;
+        }
+        @media only screen and (max-width: $mobile) {
+            padding: 14px 20px;
+            max-width: 150px;
+            @include mixins.text(14px, 20px, 700, black);
+        }
     }
 }
 
@@ -572,7 +540,7 @@ body {
     }
 
     @media only screen and (max-width: $mobile) {
-        padding: 50px 0 40px;
+        padding: 50px 0 36px;
     }
 
     .section-title {
@@ -684,6 +652,7 @@ body {
         }
 
         @media only screen and (max-width: $mobile) {
+            margin-top: 18px;
             font-size: 9px;
             line-height: 17px;
         }
@@ -1341,4 +1310,46 @@ body {
 
 .btn {
     width: 215px;
+}
+
+.hidden-md {
+    display: inline-block;
+    @media only screen and (max-width: $desktop-small) {
+        display: none;
+    }
+}
+
+.visible-md {
+    display: none;
+    @media only screen and (max-width: $desktop-small) {
+        display: inline-block;
+    }
+}
+
+.hidden-tablet {
+    display: inline-block;
+    @media only screen and (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.visible-tablet {
+    display: none;
+    @media only screen and (max-width: $tablet) {
+        display: inline-block;
+    }
+}
+
+.hidden-sm {
+    display: inline-flex;
+    @media only screen and (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.visible-sm {
+    display: none;
+    @media only screen and (max-width: $mobile) {
+        display: inline-block;
+    }
 }
