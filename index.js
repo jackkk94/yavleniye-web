@@ -1,3 +1,9 @@
+const COPY_TEXT_BUTTON = document.getElementById('textToCopy');
+const MENU_TOGGLER = document.getElementById('menuToggler');
+const COPY_TEXT_SUCCESS_MESSAGE = 'Текст скопирован';
+const COPY_TEXT_ERROR_MESSAGE = 'Не удалось скопировать текст: ';
+const TEXT_TO_COPY = 'Пожертвование для МРГ "Явление Духа и Силы"';
+
 $(document).on('ready', function () {
   $('.carousel').slick({
     infinite: false,
@@ -12,7 +18,7 @@ $(document).on('ready', function () {
     draggable: true,
     swipe: true,
     swipeToSlide: true,
-              
+
     responsive: [
       {
         breakpoint: 1500,
@@ -33,11 +39,11 @@ $(document).on('ready', function () {
         },
       },
 
-       {
+      {
         breakpoint: 740,
         settings: {
           slidesToShow: 2,
-           infinite: true,
+          infinite: true,
         },
       },
       {
@@ -50,7 +56,6 @@ $(document).on('ready', function () {
         breakpoint: 450,
         settings: {
           slidesToShow: 1,
-
         },
       },
     ],
@@ -82,24 +87,52 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-document.getElementById('textToCopy').addEventListener('click', async () => {
+COPY_TEXT_BUTTON.addEventListener('click', async () => {
   if (!navigator.clipboard) {
     return;
   }
 
   try {
-    await navigator.clipboard.writeText('Пожертвование для МРГ "Явление Духа и Силы"');
+    await navigator.clipboard.writeText(TEXT_TO_COPY);
+
+    const textElement = document.querySelector('#textToCopy .text');
+    const originalText = textElement.innerHTML;
+    if (textElement && originalText) {
+      textElement.innerHTML = COPY_TEXT_SUCCESS_MESSAGE;
+
+      COPY_TEXT_BUTTON.classList.add('pulse');
+      setTimeout(() => {
+        textElement.innerHTML = originalText;
+        COPY_TEXT_BUTTON.classList.remove('pulse');
+      }, 1000);
+    }
   } catch (err) {
-    console.error('Не удалось скопировать текст: ', err);
+    console.error(COPY_TEXT_ERROR_MESSAGE, err);
   }
 });
 
-document.getElementById('menuToggler').addEventListener('click', async () => {
+MENU_TOGGLER.addEventListener('click', async () => {
   const el = document.querySelector('.menu-mobile');
-    if (el) {
-     el.classList.toggle('opened')
-    }
+  if (el) {
+    el.classList.toggle('opened');
+  }
 });
 
+const handleModalClick = ({ currentTarget, target }) => {
+  const isClickedOnBackdrop = target === currentTarget;
 
+  if (isClickedOnBackdrop) {
+    currentTarget.close();
+  }
+};
 
+function openModal(id) {
+  if (!id) return;
+  const modal = document.getElementById(id);
+  if (!modal) return;
+
+  modal.showModal();
+  setTimeout(() => {
+    modal.addEventListener('click', handleModalClick);
+  }, 0);
+}

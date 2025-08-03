@@ -31,8 +31,18 @@ body {
     box-sizing: border-box;
 }
 
+dialog::backdrop,
+dialog + .backdrop {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .mb-0 {
     margin-bottom: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
 }
 
 .btn {
@@ -619,12 +629,25 @@ body {
                 border: 1px dashed black;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                gap: 28px;
+                height: 94px;
+                gap: 48px;
 
                 .text {
                     padding-right: 28px;
                     @include mixins.text(15px, 26px, 400, black);
+                }
+
+                @media only screen and (max-width: $mobile) {
+                    height: 66px;
+                    padding: 12px 18px;
+                    max-width: 265px;
+                    gap: 24px;
+                    .img {
+                        height: 24px;
+                    }
+                    .text {
+                        padding: 0;
+                    }
                 }
             }
             .info {
@@ -1042,7 +1065,8 @@ body {
 
         .policy {
             text-align: right;
-            a {
+            &-link {
+                cursor: pointer;
                 @include mixins.text(12px, 23px, 400, $gold);
                 @media only screen and (max-width: $desktop-small) {
                     font-size: 9px;
@@ -1128,7 +1152,7 @@ body {
                 }
 
                 @media only screen and (max-width: $mobile) {
-                    a {
+                    .policy-link {
                         font-size: 7px;
                     }
                     margin: 0 auto;
@@ -1352,4 +1376,67 @@ body {
     @media only screen and (max-width: $mobile) {
         display: inline-block;
     }
+}
+
+.modal {
+    &::before {
+        position: fixed;
+        content: "X";
+        font-size: 20px;
+        top: 28px;
+        right: 16px;
+        cursor: pointer;
+        display: block;
+        color: white;
+        @media only screen and (max-width: $mobile) {
+            color: black;
+        }
+    }
+    width: 390px;
+    max-width: 97vw;
+    border: 0 !important;
+
+    padding: 0;
+    .modal-wrapper {
+        padding: 38px 24px;
+    }
+    outline: none;
+    font-family: Manrope;
+    letter-spacing: 0;
+
+    &-title {
+        @include mixins.text(16px, 22px, 700);
+    }
+
+    p,
+    &-header {
+        margin-top: 14px;
+        @include mixins.text(12px, 18px, 400);
+    }
+
+    &-header {
+        font-weight: 700;
+    }
+
+    &-list {
+        list-style-type: disc;
+        display: block;
+        padding: 0 24px 0;
+        @include mixins.text(12px, 18px, 400);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.pulse {
+    animation: pulse 0.6s;
 }
