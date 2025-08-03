@@ -1384,12 +1384,13 @@ dialog + .backdrop {
         content: "X";
         font-size: 20px;
         top: 28px;
-        right: 16px;
+        right: 32px;
         cursor: pointer;
         display: block;
         color: white;
         @media only screen and (max-width: $mobile) {
             color: black;
+            right: 16px;
         }
     }
     width: 390px;
