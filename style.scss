@@ -122,7 +122,7 @@ dialog + .backdrop {
 }
 
 .pattern-1:before {
-    @include mixins.pattern("./img/patterns/pattern-1.svg", 884px, 871 / 317, -10px, -14px);
+    @include mixins.pattern("./assets/img/patterns/pattern-1.svg", 884px, 871 / 317, -10px, -14px);
     top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -135,7 +135,7 @@ dialog + .backdrop {
 
     @media only screen and (max-width: $mobile) {
         width: 408px;
-        background-image: url(./img/patterns/pattern-1-mobile.svg);
+        background-image: url(./assets/img/patterns/pattern-1-mobile.svg);
         aspect-ratio: 623 / 227;
         top: 40%;
     }
@@ -145,7 +145,7 @@ dialog + .backdrop {
     }
 }
 .pattern-2:before {
-    @include mixins.pattern("./img/patterns/pattern-2.svg", 660px, 20 / 1, auto, -14px, -35px);
+    @include mixins.pattern("./assets/img/patterns/pattern-2.svg", 660px, 20 / 1, auto, -14px, -35px);
     @media only screen and (max-width: $desktop-small) {
         width: 579px;
         left: -26px;
@@ -165,7 +165,7 @@ dialog + .backdrop {
     }
 }
 .pattern-3:before {
-    @include mixins.pattern("./img/patterns/pattern-3.svg", 835px, 835 / 187, 50%, 50%);
+    @include mixins.pattern("./assets/img/patterns/pattern-3.svg", 835px, 835 / 187, 50%, 50%);
     transform: translate(-50%, -50%);
     @media only screen and (max-width: $desktop-small) {
         width: 608px;
@@ -178,7 +178,7 @@ dialog + .backdrop {
 
 .pattern-4:before {
     z-index: -1;
-    @include mixins.pattern("./img/patterns/pattern-4.svg", 191px, 191 / 38, -10px, -14px);
+    @include mixins.pattern("./assets/img/patterns/pattern-4.svg", 191px, 191 / 38, -10px, -14px);
     @media only screen and (max-width: $desktop-small) {
         width: 134px;
         top: -7px;
@@ -186,26 +186,26 @@ dialog + .backdrop {
 }
 
 .pattern-5:before {
-    @include mixins.pattern("./img/patterns/pattern-5.svg", 211px, 211 / 210, -47px, -47px);
+    @include mixins.pattern("./assets/img/patterns/pattern-5.svg", 211px, 211 / 210, -47px, -47px);
     @media only screen and (max-width: $desktop-small) {
         top: -20px;
         left: -34px;
         width: 156px;
     }
     @media only screen and (max-width: $tablet) {
-        @include mixins.pattern("./img/patterns/pattern-5-tablet.svg", 93px, 93 / 92, auto, -20px);
+        @include mixins.pattern("./assets/img/patterns/pattern-5-tablet.svg", 93px, 93 / 92, auto, -20px);
         left: -64px;
         bottom: -20px;
     }
 
     @media only screen and (max-width: $mobile) {
-        @include mixins.pattern("./img/patterns/pattern-5-mobile.svg", 45px, 45 / 58, -27px, 33px);
+        @include mixins.pattern("./assets/img/patterns/pattern-5-mobile.svg", 45px, 45 / 58, -27px, 33px);
         display: inline-block !important;
     }
 }
 
 .pattern-6:before {
-    @include mixins.pattern("./img/patterns/pattern-6.svg", 101px, 101 / 4, auto, 0px, -12px);
+    @include mixins.pattern("./assets/img/patterns/pattern-6.svg", 101px, 101 / 4, auto, 0px, -12px);
     @media only screen and (max-width: $desktop-small) {
         width: 82px;
         bottom: -22px;
@@ -213,7 +213,7 @@ dialog + .backdrop {
 }
 
 .pattern-7:before {
-    @include mixins.pattern("./img/patterns/pattern-7.svg", 169px, 169 / 5, auto, -4px, -5px);
+    @include mixins.pattern("./assets/img/patterns/pattern-7.svg", 169px, 169 / 5, auto, -4px, -5px);
     @media only screen and (max-width: $desktop-small) {
         width: 121px;
         bottom: -4px;
@@ -221,7 +221,7 @@ dialog + .backdrop {
 }
 
 .pattern-8:before {
-    @include mixins.pattern("./img/patterns/pattern-8.svg", 329px, 329 / 9, auto, -14px, -6px);
+    @include mixins.pattern("./assets/img/patterns/pattern-8.svg", 329px, 329 / 9, auto, -14px, -6px);
     @media only screen and (max-width: $desktop-small) {
         width: 243px;
         left: -8px;
@@ -230,13 +230,13 @@ dialog + .backdrop {
 }
 
 .pattern-9:before {
-    @include mixins.pattern("./img/patterns/pattern-9.svg", 75px, 75 / 4, auto, -2px, -4px);
+    @include mixins.pattern("./assets/img/patterns/pattern-9.svg", 75px, 75 / 4, auto, -2px, -4px);
     @media only screen and (max-width: $desktop-small) {
         width: 72px;
     }
 }
 .pattern-10:before {
-    @include mixins.pattern("./img/patterns/pattern-10.svg", 337px, 337 / 9, auto, 3px, -7px);
+    @include mixins.pattern("./assets/img/patterns/pattern-10.svg", 337px, 337 / 9, auto, 3px, -7px);
     @media only screen and (max-width: $desktop-small) {
         width: 334px;
         left: -12px;
@@ -246,14 +246,14 @@ dialog + .backdrop {
     }
 }
 .pattern-11:before {
-    @include mixins.pattern("./img/patterns/pattern-11.svg", 56px, 56 / 3, auto, 3px, -5px);
+    @include mixins.pattern("./assets/img/patterns/pattern-11.svg", 56px, 56 / 3, auto, 3px, -5px);
     @media only screen and (max-width: $desktop-small) {
         display: none;
     }
 }
 
 .pattern-12:after {
-    @include mixins.pattern("./img/patterns/pattern-12.svg", 149px, 149 / 193, auto, auto, -17px, -28px);
+    @include mixins.pattern("./assets/img/patterns/pattern-12.svg", 149px, 149 / 193, auto, auto, -17px, -28px);
     @media only screen and (max-width: $desktop-small) {
         width: 103px;
         bottom: -67px;
@@ -265,13 +265,13 @@ dialog + .backdrop {
         top: -72px;
     }
     @media only screen and (max-width: $mobile) {
-        @include mixins.pattern("./img/patterns/pattern-12-mobile.svg", 45px, 45 / 58, auto, auto, -17px, -14px);
+        @include mixins.pattern("./assets/img/patterns/pattern-12-mobile.svg", 45px, 45 / 58, auto, auto, -17px, -14px);
         display: inline-block !important;
     }
 }
 
 .pattern-13:before {
-    @include mixins.pattern("./img/patterns/pattern-13.svg", 48px, 48 / 9, auto, 0, -8px);
+    @include mixins.pattern("./assets/img/patterns/pattern-13.svg", 48px, 48 / 9, auto, 0, -8px);
     @media only screen and (max-width: $mobile) {
         display: none;
     }
@@ -329,7 +329,7 @@ dialog + .backdrop {
         @media only screen and (max-width: $mobile) {
             .icon-menu {
                 display: inline-block;
-                background-image: url(./img/icon-menu.svg);
+                background-image: url(./assets/img/icon-menu.svg);
                 width: 30px;
                 height: 18px;
                 background-position: center;
@@ -393,7 +393,7 @@ dialog + .backdrop {
                     display: block;
                     width: 12px;
                     height: 12px;
-                    background-image: url("./img/arrow.svg");
+                    background-image: url("./assets/img/arrow.svg");
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -665,6 +665,9 @@ dialog + .backdrop {
         width: 882px;
         padding: 14px 16px;
         text-align: center;
+        .link {
+            color: #d4c6a5;
+        }
         @include mixins.text(14px, 27px, 400, black);
         @media only screen and (max-width: $desktop-medium) {
             margin-top: 30px;
@@ -844,7 +847,7 @@ dialog + .backdrop {
                             display: block;
                             width: 12px;
                             height: 12px;
-                            background-image: url("./img/arrow.svg");
+                            background-image: url("./assets/img/arrow.svg");
                             background-size: cover;
                             background-position: center;
                             background-repeat: no-repeat;
@@ -899,7 +902,7 @@ dialog + .backdrop {
             gap: 48px;
         }
         .icon {
-            background-image: url("./img/arrow-left.svg");
+            background-image: url("./assets/img/arrow-left.svg");
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -997,7 +1000,7 @@ dialog + .backdrop {
                     display: block;
                     width: 16px;
                     height: 16px;
-                    background-image: url("./img/arrow.svg");
+                    background-image: url("./assets/img/arrow.svg");
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
