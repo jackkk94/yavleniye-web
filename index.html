@@ -34,8 +34,10 @@
 			</ul>
 			<ul class='socials-list'>
 				<li><a href='https://t.me/yavleniechurch' class='social-item' target="_blank">Telegram</a></li>
-				<li><a href='https://vk.com/yavleniechurch?from=groups' class='social-item' target="_blank">Vkontakte</a></li>
-				<li><a href='https://www.instagram.com/yavleniechurch?igsh=MXgwcHVvNGJ1ejF1bA==' target="_blank" class='social-item'>Instagram*</a></li>
+				<li><a href='https://vk.com/yavleniechurch?from=groups' class='social-item'
+						target="_blank">Vkontakte</a></li>
+				<li><a href='https://www.instagram.com/yavleniechurch?igsh=MXgwcHVvNGJ1ejF1bA==' target="_blank"
+						class='social-item'>Instagram*</a></li>
 				<li><a href='https://www.youtube.com/@yavleniye' class='social-item' target="_blank">YouTube</a></li>
 			</ul>
 		</div>
@@ -111,6 +113,29 @@
 		<a class='btn btn-dark' target="_blank" href="https://t.me/yavleniechurch/806">Как пройти?</a>
 	</section>
 
+	<section id='preaching' class='section-preaching'>
+		<div class="video-container">
+			<div class="video-player" id="video-player">
+
+			</div>
+			<div class="video-list-wrapper">
+				<div class="video-list" id="video-list">
+					<div class="video-list-title">
+						<div class="videos-title">Проповеди</div>
+						<div class="videos-counter">
+							<img src='./assets/img/player-logo.svg' class='videos-counter-icon' alt=''>
+							<div class="videos-counter-info">
+								<span id="videoCount"></span> видео
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
 	<section id='services' class='section-connect-commands'>
 		<h2 class='section-title pattern-2'>
 			Коннект-команды
@@ -185,6 +210,20 @@
 
 			</div>
 			<div class="slide-card">
+				<a href="https://t.me/saankov" target="_blank">
+					<div class="img-wrapper">
+						<img src="./assets/img/slides/slide-7.jpg">
+					</div>
+					<div class="info">
+						<div class="title">Саньковы <br>
+							Андрей и Алена</div>
+						<div class="address">Каждая пятница в 19:00 <br>
+							м.Новочеркасская</div>
+						<span class="link">Посетить</span>
+					</div>
+				</a>
+			</div>
+			<div class="slide-card">
 				<a href="https://t.me/Anhenpetroch" target="_blank">
 					<div class="img-wrapper">
 						<img src="./assets/img/slides/slide-5.png">
@@ -220,6 +259,8 @@
 				</a>
 
 			</div>
+
+			
 
 		</div>
 
@@ -266,7 +307,8 @@
 			предоставляем отчеты о
 			расходовании средств
 			по запросу<br class="visible-sm">
-			Перечисляя деньги, вы соглашаетесь <a class="link" href="./assets/docs/donations.pdf" target="_blank">Договором пожертвования</a>.</p>
+			Перечисляя деньги, вы соглашаетесь <a class="link" href="./assets/docs/donations.pdf"
+				target="_blank">Договором пожертвования</a>.</p>
 	</section>
 </main>
 
@@ -742,6 +784,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="./js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <script src='./index.js'></script>
+<script src='./vk-videos.js'></script>
 </body>
 
 </html>

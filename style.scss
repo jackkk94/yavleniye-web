@@ -5,9 +5,11 @@
 
 $gold: #d4c6a5;
 
-$desktop-medium: 1919px;
-$desktop-small: 1439px;
+$desktop-large: 1919px;
+$desktop-medium: 1439px;
+$desktop-small: 1200px;
 $tablet: 1024px;
+$tablet-small: 970px;
 $mobile: 680px;
 $mobile-small: 450px;
 
@@ -128,7 +130,7 @@ dialog + .backdrop {
     transform: translate(-50%, -50%);
     z-index: -1;
 
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 620px;
         top: 43%;
     }
@@ -146,7 +148,7 @@ dialog + .backdrop {
 }
 .pattern-2:before {
     @include mixins.pattern("./assets/img/patterns/pattern-2.svg", 660px, 20 / 1, auto, -14px, -35px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 579px;
         left: -26px;
         bottom: -34px;
@@ -167,7 +169,7 @@ dialog + .backdrop {
 .pattern-3:before {
     @include mixins.pattern("./assets/img/patterns/pattern-3.svg", 835px, 835 / 187, 50%, 50%);
     transform: translate(-50%, -50%);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 608px;
     }
 
@@ -179,7 +181,7 @@ dialog + .backdrop {
 .pattern-4:before {
     z-index: -1;
     @include mixins.pattern("./assets/img/patterns/pattern-4.svg", 191px, 191 / 38, -10px, -14px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 134px;
         top: -7px;
     }
@@ -187,7 +189,7 @@ dialog + .backdrop {
 
 .pattern-5:before {
     @include mixins.pattern("./assets/img/patterns/pattern-5.svg", 211px, 211 / 210, -47px, -47px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         top: -20px;
         left: -34px;
         width: 156px;
@@ -206,7 +208,7 @@ dialog + .backdrop {
 
 .pattern-6:before {
     @include mixins.pattern("./assets/img/patterns/pattern-6.svg", 101px, 101 / 4, auto, 0px, -12px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 82px;
         bottom: -22px;
     }
@@ -214,7 +216,7 @@ dialog + .backdrop {
 
 .pattern-7:before {
     @include mixins.pattern("./assets/img/patterns/pattern-7.svg", 169px, 169 / 5, auto, -4px, -5px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 121px;
         bottom: -4px;
     }
@@ -222,7 +224,7 @@ dialog + .backdrop {
 
 .pattern-8:before {
     @include mixins.pattern("./assets/img/patterns/pattern-8.svg", 329px, 329 / 9, auto, -14px, -6px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 243px;
         left: -8px;
         bottom: -4px;
@@ -231,13 +233,13 @@ dialog + .backdrop {
 
 .pattern-9:before {
     @include mixins.pattern("./assets/img/patterns/pattern-9.svg", 75px, 75 / 4, auto, -2px, -4px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 72px;
     }
 }
 .pattern-10:before {
     @include mixins.pattern("./assets/img/patterns/pattern-10.svg", 337px, 337 / 9, auto, 3px, -7px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 334px;
         left: -12px;
     }
@@ -247,14 +249,14 @@ dialog + .backdrop {
 }
 .pattern-11:before {
     @include mixins.pattern("./assets/img/patterns/pattern-11.svg", 56px, 56 / 3, auto, 3px, -5px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         display: none;
     }
 }
 
 .pattern-12:after {
     @include mixins.pattern("./assets/img/patterns/pattern-12.svg", 149px, 149 / 193, auto, auto, -17px, -28px);
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         width: 103px;
         bottom: -67px;
         right: -33px;
@@ -308,7 +310,7 @@ dialog + .backdrop {
                 }
             }
         }
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             padding: 0 48px 0 18px;
             @include mixins.text(12px, 12px, 700, white);
             .navigation-list {
@@ -462,7 +464,7 @@ dialog + .backdrop {
 
             .title {
                 @include mixins.text(80px, 86px, 800, white);
-                @media only screen and (max-width: $desktop-small) {
+                @media only screen and (max-width: $desktop-medium) {
                     @include mixins.text(60px, 70px, 800, white);
                 }
                 @media only screen and (max-width: $mobile) {
@@ -473,7 +475,7 @@ dialog + .backdrop {
             .description {
                 margin-top: 28px;
                 @include mixins.text(22px, 33px, 400, white);
-                @media only screen and (max-width: $desktop-small) {
+                @media only screen and (max-width: $desktop-medium) {
                     font-size: 18px;
                     margin-top: 8px;
                 }
@@ -486,7 +488,7 @@ dialog + .backdrop {
             .btn {
                 margin-top: 60px;
                 width: 172px;
-                @media only screen and (max-width: $desktop-small) {
+                @media only screen and (max-width: $desktop-medium) {
                     margin-top: 49px;
                     width: 146px;
                     padding: 10px;
@@ -504,11 +506,11 @@ dialog + .backdrop {
                 }
             }
 
-            @media only screen and (max-width: $desktop-medium) {
+            @media only screen and (max-width: $desktop-large) {
                 width: 1000px;
             }
 
-            @media only screen and (max-width: $desktop-small) {
+            @media only screen and (max-width: $desktop-medium) {
                 width: 762px;
             }
 
@@ -542,7 +544,7 @@ dialog + .backdrop {
     align-items: center;
     flex-direction: column;
 
-    @media only screen and (max-width: $desktop-medium) {
+    @media only screen and (max-width: $desktop-large) {
         padding: 140px 0 110px;
     }
     @media only screen and (max-width: $tablet) {
@@ -563,7 +565,7 @@ dialog + .backdrop {
         @include mixins.text(60px, 47px, 800, black);
         text-transform: uppercase;
 
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             font-size: 40px;
             line-height: 48px;
         }
@@ -577,7 +579,7 @@ dialog + .backdrop {
         display: flex;
         align-items: center;
         gap: 78px;
-        @media only screen and (max-width: $desktop-medium) {
+        @media only screen and (max-width: $desktop-large) {
             margin-top: 110px;
         }
 
@@ -669,7 +671,7 @@ dialog + .backdrop {
             color: #d4c6a5;
         }
         @include mixins.text(14px, 27px, 400, black);
-        @media only screen and (max-width: $desktop-medium) {
+        @media only screen and (max-width: $desktop-large) {
             margin-top: 30px;
         }
         @media only screen and (max-width: $tablet) {
@@ -693,7 +695,7 @@ dialog + .backdrop {
     display: flex;
     align-items: center;
     flex-direction: column;
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         padding-top: 54px;
     }
     @media only screen and (max-width: $tablet) {
@@ -716,16 +718,16 @@ dialog + .backdrop {
             right: 0;
             left: auto;
             background: linear-gradient(90deg, rgba(0, 0, 0, 0) 38.36%, #000000 100%);
-            @media only screen and (max-width: $desktop-medium) {
+            @media only screen and (max-width: $desktop-large) {
                 z-index: 0;
             }
 
-            @media only screen and (max-width: $desktop-small) {
+            @media only screen and (max-width: $desktop-medium) {
                 z-index: 10;
                 width: 158px;
             }
         }
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             width: 158px;
         }
 
@@ -742,7 +744,7 @@ dialog + .backdrop {
             left: -14px;
         }
         @include mixins.text(60px, 52px, 800, white);
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             font-size: 50px;
         }
         @media only screen and (max-width: $tablet) {
@@ -759,7 +761,7 @@ dialog + .backdrop {
         text-align: center;
         margin-top: 32px;
         @include mixins.text(20px, 36px, 300, #d4c6a5);
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             margin-top: 40px;
             font-size: 18px;
             line-height: 30px;
@@ -950,7 +952,7 @@ dialog + .backdrop {
             gap: 38px;
             z-index: 10;
             align-items: center;
-            @media only screen and (max-width: $desktop-small) {
+            @media only screen and (max-width: $desktop-medium) {
                 gap: 62px;
             }
             @media only screen and (max-width: $tablet) {
@@ -1032,7 +1034,7 @@ dialog + .backdrop {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             padding: 39px 24px 33px 33px;
         }
 
@@ -1057,7 +1059,7 @@ dialog + .backdrop {
                 width: 100%;
             }
 
-            @media only screen and (max-width: $desktop-small) {
+            @media only screen and (max-width: $desktop-medium) {
                 width: 100px;
             }
 
@@ -1071,7 +1073,7 @@ dialog + .backdrop {
             &-link {
                 cursor: pointer;
                 @include mixins.text(12px, 23px, 400, $gold);
-                @media only screen and (max-width: $desktop-small) {
+                @media only screen and (max-width: $desktop-medium) {
                     font-size: 9px;
                     line-height: 23px;
                 }
@@ -1085,10 +1087,10 @@ dialog + .backdrop {
         .links-container {
             padding-top: 60px;
             padding-left: 60px;
-            @media only screen and (max-width: $desktop-medium) {
+            @media only screen and (max-width: $desktop-large) {
                 padding-top: 0px;
             }
-            @media only screen and (max-width: $desktop-small) {
+            @media only screen and (max-width: $desktop-medium) {
                 padding-top: 48px;
             }
             @media only screen and (max-width: $tablet) {
@@ -1111,13 +1113,13 @@ dialog + .backdrop {
 
             .list {
                 gap: 50px;
-                @media only screen and (max-width: $desktop-small) {
+                @media only screen and (max-width: $desktop-medium) {
                     gap: 27px;
                 }
                 .list-item a {
                     text-transform: uppercase;
                     @include mixins.text(14px, 19px, 700, $gold);
-                    @media only screen and (max-width: $desktop-small) {
+                    @media only screen and (max-width: $desktop-medium) {
                         font-size: 10px;
                         line-height: 18px;
                     }
@@ -1172,11 +1174,11 @@ dialog + .backdrop {
 
     justify-content: center;
 
-    @media only screen and (max-width: $desktop-medium) {
+    @media only screen and (max-width: $desktop-large) {
         padding: 150px 0;
     }
 
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         padding: 74px 0;
     }
 
@@ -1189,7 +1191,7 @@ dialog + .backdrop {
         margin: 0 auto;
         display: flex;
         gap: 40px;
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             max-width: 930px;
             gap: 36px;
         }
@@ -1211,7 +1213,7 @@ dialog + .backdrop {
                 width: 100%;
             }
 
-            @media only screen and (max-width: $desktop-small) {
+            @media only screen and (max-width: $desktop-medium) {
                 width: 581px;
             }
             @media only screen and (max-width: $tablet) {
@@ -1226,7 +1228,7 @@ dialog + .backdrop {
                 text-transform: uppercase;
                 @include mixins.text(48px, 67px, 800);
                 margin-bottom: 54px;
-                @media only screen and (max-width: $desktop-small) {
+                @media only screen and (max-width: $desktop-medium) {
                     @include mixins.text(40px, 50px, 800);
                     margin-bottom: 45px;
                 }
@@ -1236,7 +1238,7 @@ dialog + .backdrop {
                 @include mixins.text(16px, 24px, 300);
                 margin-bottom: 28px;
 
-                @media only screen and (max-width: $desktop-small) {
+                @media only screen and (max-width: $desktop-medium) {
                     @include mixins.text(12px, 19px, 300);
                     margin-bottom: 14px;
                 }
@@ -1265,10 +1267,10 @@ dialog + .backdrop {
 .section-service {
     padding: 144px 0 191px;
     text-align: center;
-    @media only screen and (max-width: $desktop-medium) {
+    @media only screen and (max-width: $desktop-large) {
         padding: 90px 0 147px;
     }
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         padding: 135px 0 102px;
     }
     @media only screen and (max-width: $tablet) {
@@ -1289,7 +1291,7 @@ dialog + .backdrop {
             text-align: center;
             width: 871px;
         }
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             @include mixins.text(40px, 58px, 800);
         }
 
@@ -1302,7 +1304,7 @@ dialog + .backdrop {
         position: relative;
         margin-top: 38px;
         @include mixins.text(27px, 44px, 300);
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             margin-top: 60px;
             @include mixins.text(23px, 37px, 300);
         }
@@ -1320,7 +1322,7 @@ dialog + .backdrop {
     .btn {
         margin-top: 53px;
 
-        @media only screen and (max-width: $desktop-small) {
+        @media only screen and (max-width: $desktop-medium) {
             margin-top: 40px;
             width: 162px;
             @include mixins.text(16px, 16px, 700);
@@ -1341,14 +1343,14 @@ dialog + .backdrop {
 
 .hidden-md {
     display: inline-block;
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         display: none;
     }
 }
 
 .visible-md {
     display: none;
-    @media only screen and (max-width: $desktop-small) {
+    @media only screen and (max-width: $desktop-medium) {
         display: inline-block;
     }
 }
@@ -1443,4 +1445,134 @@ dialog + .backdrop {
 }
 .pulse {
     animation: pulse 0.6s;
+}
+
+.section-preaching {
+    display: flex;
+    //display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+    padding: 120px 0;
+    @media only screen and (max-width: $mobile) {
+        padding: 90px 20px 70px;
+    }
+
+    .video-container {
+        width: 100%;
+        max-width: 1200px;
+        height: 452px;
+        display: flex;
+        @media only screen and (max-width: $desktop-small) {
+            max-width: 960px;
+            height: 370px;
+        }
+        @media only screen and (max-width: $tablet-small) {
+            max-width: 600px;
+            height: auto;
+            flex-direction: column;
+
+            .video-player,
+            .video-list {
+                width: 100%;
+            }
+        }
+
+        .video-player {
+            flex: 2;
+            background: #000;
+
+            @media only screen and (max-width: $tablet-small) {
+                height: 344px;
+                flex: auto;
+            }
+
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 316 / 160;
+            }
+        }
+        .video-list-wrapper {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+            background-color: rgb(37, 37, 37);
+            border-radius: 0 3px 3px 0;
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 16px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(to bottom, rgba(37, 37, 37, 0), #252525);
+            }
+            .video-list {
+                height: 100%;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            @media only screen and (max-width: $mobile) {
+                flex: auto;
+                height: 240px;
+            }
+        }
+
+        .video-list-title,
+        .video-item {
+            border-bottom: 1px solid black;
+            padding: 16px 18px;
+        }
+        .video-list-title {
+            .videos-title {
+                @include mixins.text(24px, 28px, 500, white);
+            }
+
+            .videos-counter {
+                margin-top: 6px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                &-icon {
+                    width: auto;
+                    height: 18px;
+                }
+                &-info {
+                    @include mixins.text(14px, 20px, 300, #d1d1d1);
+                }
+            }
+        }
+
+        .video-item {
+            cursor: pointer;
+            display: flex;
+            gap: 10px;
+
+            &-order,
+            &-duration {
+                flex-shrink: 0;
+                @include mixins.text(13px, 26px, 300, #d1d1d1);
+            }
+
+            &-name {
+                flex: 1;
+                @include mixins.text(15px, 26px, 400, white);
+            }
+
+            @media only screen and (max-width: $mobile) {
+                &-order,
+                &-duration,
+                &-name {
+                    @include mixins.text(12px, 18px, 400, white);
+                }
+            }
+        }
+        .video-item:hover,
+        .video-item.active {
+            background-color: rgb(34, 33, 36);
+        }
+    }
 }
