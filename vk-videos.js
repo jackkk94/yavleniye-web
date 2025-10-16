@@ -1,13 +1,13 @@
 const VIDEOS = [
-  { id: 456240127, title: 'Дмитрий Поляков - Край', duration: '41:48' },
-  { id: 456240103, title: 'Дан Блинов - Лилии и птицы', duration: '55:34' },
+  { id: 456240103, title: 'Дан Блинов - Лилии и птицы', duration: '55:44' },
   { id: 456240091, title: 'Дан Блинов - Два добра', duration: '45:38' },
-  { id: 456240083, title: 'Алена Пияшева - Живые камни', duration: '53:16' },
-  { id: 456240079, title: 'Константин Балдин - Секретный ингридиент', duration: '51:19' },
-  { id: 456240065, title: 'Даниил Горбунов - Взломай рутину', duration: '29:23' },
-  { id: 456240052, title: 'Дымченко Павел - Путь в Царство Небесное', duration: '42:45' },
+  { id: 456240127, title: 'Дмитрий Поляков - Край', duration: '41:48' },
   { id: 456240041, title: 'Дан Блинов - Новое Сердце', duration: '40:03' },
-  { id: 456240016, title: 'Дан Блинов - Ошибка опытных', duration: '57:03' },
+  { id: 456240223, title: 'Константин Балдин - Недоношенное покаяние | 5 октября', duration: '1:59:44' },
+  { id: 456239898, title: 'Дан Блинов - Даже если нет', duration: '45:52' },
+  { id: 456239715, title: 'Мария Бондаренко "Это проповедь" | 16 февраля', duration: '48:54' },
+  { id: 456239636, title: 'Дан Блинов "Чудный обмен" | 12 января', duration: '42:36' },
+  { id: 456239885, title: 'Дан Блинов - Благодать и Истина', duration: '55:11' },
 ];
 
 const VIDEO_OID = -75418384;
@@ -62,9 +62,9 @@ function renderVideoList() {
     const item = createElement('div', 'video-item');
     const itemOrder = createElement('div', 'video-item-order', index + 1);
     item.appendChild(itemOrder);
-    const itemName = createElement('div', 'video-item-name', video.title)
+    const itemName = createElement('div', 'video-item-name', video.title);
     item.appendChild(itemName);
-    const itemDuration = createElement('div', 'video-item-duration', video.duration)
+    const itemDuration = createElement('div', 'video-item-duration', video.duration);
     item.appendChild(itemDuration);
 
     item.addEventListener('click', () => {
