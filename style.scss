@@ -1454,7 +1454,23 @@ dialog + .backdrop {
     background: #000000;
     padding: 120px 0;
     @media only screen and (max-width: $mobile) {
-        padding: 90px 20px 70px;
+        padding: 70px 20px 70px;
+    }
+
+    .section-title {
+        @include mixins.text(60px, 52px, 800, white);
+        @media only screen and (max-width: $desktop-medium) {
+            font-size: 50px;
+        }
+        @media only screen and (max-width: $tablet) {
+            font-size: 48px;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            font-size: 29px;
+    
+        }
+        text-transform: uppercase;
     }
 
     .video-container {
@@ -1462,11 +1478,14 @@ dialog + .backdrop {
         max-width: 1200px;
         height: 452px;
         display: flex;
+        margin-top: 64px;
         @media only screen and (max-width: $desktop-small) {
             max-width: 960px;
             height: 370px;
+            margin-top: 46px;
         }
         @media only screen and (max-width: $tablet-small) {
+            margin-top: 40px;
             max-width: 600px;
             height: auto;
             flex-direction: column;
