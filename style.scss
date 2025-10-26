@@ -1118,14 +1118,19 @@ dialog + .backdrop {
                 }
                 .list-item a {
                     text-transform: uppercase;
-                    @include mixins.text(14px, 19px, 700, $gold);
+                    @include mixins.text(12px, 19px, 700, $gold);
+                   
                     @media only screen and (max-width: $desktop-medium) {
                         font-size: 10px;
                         line-height: 18px;
                     }
 
+                    @media only screen and (max-width:  $tablet-small) {
+                        font-size: 8px;
+                    }
+
                     @media only screen and (max-width: $mobile) {
-                        font-size: 7px;
+                        font-size: 5px;
                     }
                 }
 
